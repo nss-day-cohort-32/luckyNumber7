@@ -1,2 +1,2 @@
  .DS_Store
- "!node_modules/**/*.js"
+ src/lib/node_modules
