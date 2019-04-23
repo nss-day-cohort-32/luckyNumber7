@@ -16,34 +16,4 @@ findParkFeatures = function () {
 filters = URLfeatureString.join(" & ");
 let searchParks = basUrl.concay(filters).concat(apiKey)
 
-fetch(`${seachParks}`)
-    .then(thoseParks => parks.json())
-    .then(parsedParks => {
-        let matchingParks = document.querySelector("#matchingParks")
-        if (matchingParks.hasChildNodes()) {
-            matchingParks.innerHTML = "";
-        }
-        if (parsedParks.length === 0) {
-            matchingParks.innerHTML = `
-            <div id="noMatchingParks" class="noMatchingParks">
-            No parks have each of those features.
-            </div>
-            `
-        } else {
-            parsedParks.forEach(park => {
-                let parkName = park.park_name;
-                let Address = `${park.mapped_location_adress}`;
-                matchingParks.innerHTML += `
-                <article id="${parkName}" class="matchingPark'>
-                <h3 id="${parkName}-header" class="matching ParkHeader">${parkName}</h3>
-                <div id="${parkName}-address" class="matchingParkAddress"</div>
-                <button id="save-${parkName}" class="parkSaveBtn">
-                Save it!
-                </button>
-                </article>
-                `
-            })
-        }
-
-    })
 
