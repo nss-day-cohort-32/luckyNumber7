@@ -17,12 +17,12 @@ dom.innerHTML = `
     <button type="button" id="concerts-search-button">Search</button>
 </section>
 <section id="sectionid">
-    <input type= "text" name="restaurants" id="restaurants-search" placeholder="meetups by topic">
+    <input type= "text" name="restaurants" id="restaurants-search" placeholder="concerts by events">
     <button type="button" id="restaurants-search-button">Search</button>
 </section>
 
 <section id="sectionid">
-    <input type= "text" name="meetups" id="meetups-search" placeholder="concerts by genre">
+    <input type= "text" name="meetups" id="meetups-search" placeholder="meetups by topic">
     <button type="button" id="meetups-search-button">Search</button>
 </section>
 `

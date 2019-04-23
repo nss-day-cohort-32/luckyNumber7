@@ -1,8 +1,7 @@
 module.exports = {
     scripts: {
         files: [
-            "../scripts/**/*.js",
-           
+            "../scripts/**/*.js"
         ],
         tasks: ["eslint"],
         options: {
