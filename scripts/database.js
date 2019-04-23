@@ -19,20 +19,26 @@ const meetupsObject = {
 
                 
                     
-                    meetupResult.innerHTML = `<div class="main">
-                            
-                                            <h4>${event.name.text}</h4>
-                                            <p>${event.start.local}</p>
-                                            
-                                            <button>Save</button>
-                                            </div>
-                                            `
-                                          
-                
-
-                
-            })
+                    meetupResult.innerHTML += `<div>
+                    <div class="search__result">
+                        <p>
+                        ${eventName}
+                        <br />
+                        ${event.start.local}</p>
+                    </div>
+                    <button type="button" class="saveButton ">Save</button>
+                 </div>
             
+            
+             `
+        let searchDom = document.querySelector(".meetup__saved")
+        document.querySelector(".saveButton").addEventListener("keyup", function(){
+            let searchResult = document.querySelector(".search__result").value
+            console.log(searchResult)
+            searchDom.innerHTML = `<h4> ${searchResult}</h4>`
+        }) 
+                    
+            })
             
             
         }
