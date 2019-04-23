@@ -1,9 +1,11 @@
 console.log("its working")
-let meetup = document.getElementById("meetups-search").value
+
+console.log()
+let meetupResult = document.querySelector(".meetup__result")
 let events = [];
 const meetupsObject = {
-    meetUpsFetch(meetup) {
-    return fetch(`https://www.eventbriteapi.com/v3/events/search/?location.latitude=36.174465&location.longitude=-86.767960&start_date.keyword=today&q=${meetup}`, {
+    meetUpsFetch(meetupsDom) {
+    return fetch(`https://www.eventbriteapi.com/v3/events/search/?location.latitude=36.174465&location.longitude=-86.767960&start_date.keyword=today&q=${meetupsDom}`, {
         headers: {"Authorization": "Bearer 2BDDGL3KGZR3QEHEIKWY"}})
         .then(response => response.json())
         .then(response => {
@@ -15,17 +17,18 @@ const meetupsObject = {
                 events.push(eventName)
 
 
-                for(let i = 0; i < 4; i++){
-                    eventName[i] = eventName
-                    meetUpDom.innerHTML += `<div class="main">
+                
+                    
+                    meetupResult.innerHTML = `<div class="main">
                             
-                                            <h4>${eventName}</h4>
-                                            <p>${event.start.local}</p><br/>
+                                            <h4>${event.name.text}</h4>
+                                            <p>${event.start.local}</p>
+                                            
                                             <button>Save</button>
                                             </div>
                                             `
                                           
-                }
+                
 
                 
             })
@@ -35,5 +38,5 @@ const meetupsObject = {
         }
         
         )}}
-            console.log(events)
+        
           
