@@ -44,36 +44,40 @@
                        <button type="button" id="concerts-search-button">Search</button>
                    </section>
         <section id="sectionid">
-            <input type= "text" name="meetups" id="meetups-search" placeholder="meetups by topic">
+            <input type= "text" name="meetups" id="meetups-search" onfocus="this.value=''" value=" search meetups">
             <button type="button" id="meetups-search-button">Search</button>
         </section>
        
-        
-        <form class="meetup__saved">
+        <form id="results_container"></form>
+        <form id="meetupChoice"></form>
+
+
+
+        <!-- <form class="meetup__saved"> -->
                 <h2>saved result</h2>
+
             </form>
             <section id = "itinerary_container">
                 
                     <h3>Park:</h3>
-                    <!-- Id below displays saved park data (Park name and address) -->
+                    <!-- Kiesha and her Id below displays saved park data (Park name and address) -->
                     <p id ="park"></p>
                     <h3>Restaurant:</h3>
-                     <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
+                     <!-- Dan and Id below displays saved restaraunt data (Restaraunt name and address) -->
                     <p id="rest"></p>
                     <h3>Meet-up: </h3>
-                    <!-- Id below displays saved meet-up data (meet-up name and address) -->
+                    <!-- dek and Id below displays saved meet-up data (meet-up name and address) -->
                     <p id="meet"></p>
                     <h3>Concert: </h3>
-                    <!-- Id below displays saved concert data (concert name and start date) -->
+                    <!-- Jr and Id below displays saved concert data (concert name and start date) -->
                     <p id="concert"></p>
                  
                    
                   </section> 
 
 
-    <script src="./scripts/domBuilder.js"></script>
+    <script src="./scripts/meetupDomBuilder.js"></script>
     <script src="./scripts/database.js"></script>
-    <script src="./scripts/meetUpAppender.js"></script>
     <script src="./scripts/meetupEvent.js"></script>
 </body>
 </html>
