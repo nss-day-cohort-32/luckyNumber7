@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to Nashville!</h1>
+    <select id="parks-search">
+        <option value="ada_accessible">Handicap Accessible</option>
+        <option value="baseball_fields">Baseball Fields</option>
+        <option value="basketball_courts">Basketball Courts</option>
+        <option value="dog_park">Dog Park</option>
+        <option value="hiking_trails">Hiking Trails</option>
+        <option value="swimming_pool">Swimming Pool</option>
+    </select>
+    <button id="parksSearchBtn">Search</button>
+
+    <div id="displayParksResults">
+
+    </div>
+
+    </br>
+
+    </section>
+    <select id="foodOptions">Restaurants:
+        <option value="">Select</option>
+        <option value="152">African</option>
+        <option value="1">American</option>
+        <option value="3">Asian</option>
+        <option value="193">BBQ</option>
+        <option value="227">Bar Food</option>
+        <option value="182">Breakfast</option>
+        <option value="168">Burger</option>
+        <option value="30">Cafe</option>
+        <option value="491">Cajun</option>
+        <option value="25">Chinese</option>
+    </select>
+    <div id="displayFoodResults">
+
+    </div>
+
+    <section id="sectionid">
+        <input type="text" name="concerts" id="concerts-search" placeholder="concerts by genre">
+        <button type="button" id="concerts-search-button">Search</button>
+    </section>
+    <section id="sectionid">
+        <input type="text" name="meetups" id="meetups-search" placeholder="meetups by topic">
+        <button type="button" id="meetups-search-button">Search</button>
+    </section>
+
+
+    <form class="meetup__saved">
+        <h2>saved result</h2>
+    </form>
+    <section id="itinerary_container">
+
+        <h3>Park:</h3>
+        <!-- Id below displays saved park data (Park name and address) -->
+        <p id="park"></p>
+        <h3>Restaurant:</h3>
+        <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
+        <p id="rest"></p>
+        <h3>Meet-up: </h3>
+        <!-- Id below displays saved meet-up data (meet-up name and address) -->
+        <p id="meet"></p>
+        <h3>Concert: </h3>
+        <!-- Id below displays saved concert data (concert name and start date) -->
+        <p id="concert"></p>
+
+
+    </section>
+
+    <script src="scripts/parks.js"></script>
+</body>
+
+</html>
