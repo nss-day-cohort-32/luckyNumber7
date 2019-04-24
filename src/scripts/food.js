@@ -21,8 +21,16 @@ let restaurantChoices = function () {
                 resultsDiv.innerHTML += `<div id = "foodDiv${[i]}">
             <h2>${restaurantName}</h2>
             <p>${restaurantAddress}</p>
-            <button id = "foodSave${[i]}">SAVE</button>
-            </div>`
+            </div>
+            <button id = "foodSave${[i]}">SAVE</button>`
+            document.getElementById(`foodDiv${[i]}`).classList.add(`restaurantChoice${[i]}`)
+            console.log(`foodSave${[i]}`);
+            document.getElementById(`foodSave${i}`).onclick = () =>{
+                let restaurantChoice = document.getElementById("restaurantChoice")
+                let foodDiv = ""
+                foodDiv = document.getElementById(`foodDiv${[i]}`)
+                restaurantChoice.innerHTML += `Restaurant: ${foodDiv.innerHTML}`
+            }
             }
         })
 }

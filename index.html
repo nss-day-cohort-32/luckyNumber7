@@ -19,11 +19,8 @@
         <option value="swimming_pool">Swimming Pool</option>
     </select>
     <button id="parksSearchBtn">Search</button>
-
     <div id="displayParksResults">
-
     </div>
-
     </br>
 
     </section>
@@ -40,9 +37,6 @@
         <option value="491">Cajun</option>
         <option value="25">Chinese</option>
     </select>
-    <div id="displayFoodResults">
-
-    </div>
 
     <section id="sectionid">
         <input type="text" name="concerts" id="concerts-search" placeholder="concerts by genre">
@@ -53,32 +47,43 @@
         <button type="button" id="meetups-search-button">Search</button>
     </section>
 
+    <div id="displayFoodResults">
+
+    </div>
 
     <form class="meetup__saved">
         <h2>saved result</h2>
     </form>
     <section id="itinerary_container">
-
-        <h3>Park:</h3>
-        <div id="chosenParkDiv" class="chosenParkDiv">
-            <!-- Id below displays saved park data (Park name and address) -->
+        <div>
+            <h3>Park:</h3>
+            <div id="chosenParkDiv" class="chosenParkDiv">
+                    <!-- Id below displays saved park data (Park name and address) -->
+                    <p id="park"></p>
+                </div>
             <p id="park"></p>
         </div>
+        <div id="restaurantChoice">
+            <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
+            <p id="rest"></p>
+        </div>
+        <div>
+            <h3>Meet-up:</h3>
+            <!-- Id below displays saved meet-up data (meet-up name and address) -->
+            <p id="meet"></p>
+        </div>
+        <div>
+            <h3>Concert: </h3>
+            <!-- Id below displays saved concert data (concert name and start date) -->
+            <p id="concert"></p>
+        </div>
 
-        <h3>Restaurant:</h3>
-        <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
-        <p id="rest"></p>
-        <h3>Meet-up: </h3>
-        <!-- Id below displays saved meet-up data (meet-up name and address) -->
-        <p id="meet"></p>
-        <h3>Concert: </h3>
-        <!-- Id below displays saved concert data (concert name and start date) -->
-        <p id="concert"></p>
 
 
     </section>
 
-    <script src="scripts/parks.js"></script>
+    <script src="src/scripts/food.js"></script>
+    <script src="src/scripts/parks.js"></script>
 </body>
 
 </html>
