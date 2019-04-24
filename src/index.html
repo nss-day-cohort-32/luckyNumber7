@@ -11,7 +11,7 @@
 <body>
     <h1>Welcome to Nashville!</h1>
     <select id="parks-search">
-        <option value="ada_accessible">Handicap Accessible</option>
+        <option value="ada_accessible">Universally Accessible</option>
         <option value="baseball_fields">Baseball Fields</option>
         <option value="basketball_courts">Basketball Courts</option>
         <option value="dog_park">Dog Park</option>
@@ -60,8 +60,11 @@
     <section id="itinerary_container">
 
         <h3>Park:</h3>
-        <!-- Id below displays saved park data (Park name and address) -->
-        <p id="park"></p>
+        <div id="chosenParkDiv" class="chosenParkDiv">
+            <!-- Id below displays saved park data (Park name and address) -->
+            <p id="park"></p>
+        </div>
+
         <h3>Restaurant:</h3>
         <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
         <p id="rest"></p>
