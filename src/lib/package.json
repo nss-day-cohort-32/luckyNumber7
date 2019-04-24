@@ -18,6 +18,7 @@
     "grunt-http-server": "^2.1.0",
     "load-grunt-config": "^1.0.1"
   }
+<<<<<<< HEAD
 =======
   "dependencies": {
 =======
@@ -37,5 +38,8 @@
 }
 =======
   }
+}
+>>>>>>> master
+=======
 }
 >>>>>>> master
