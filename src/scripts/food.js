@@ -34,7 +34,7 @@ let restaurantChoices = function () {
             }
         })
 }
-//select a cuisine type    
+//select a cuisine type
 foodOptions.onchange = function () {
     cuisineTypeNumber = foodOptions.options[foodOptions.selectedIndex].value;
     //console.table represents data in console as table
