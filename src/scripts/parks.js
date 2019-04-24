@@ -19,12 +19,15 @@ findParkFeatures = () => {
         .then(response => response.json())
         .then(parksArray => parksArray.forEach(parkObject => {
             // console.log(`${park.park_name} ${park.mapped_location.human_address}`)
+            let parsedAddress = JSON.parse(parkObject.mapped_location.human_address)
+            // console.log(parsedAddress);
+            // let string =
             let parkResult = document.createElement("li")
             let saveBtn = document.createElement("button")
             saveBtn.innerHTML = "Save"
-            saveBtn.setAttribute("id", `${parkObject.park_name}: ${parkObject.mapped_location.human_address}`)
+            saveBtn.setAttribute("id", `${parkObject.park_name}: ${parsedAddress.address}`)
             saveBtn.addEventListener("click", saveParkToItin)
-            parkResult.innerHTML = `<h3>${parkObject.park_name} ${parkObject.mapped_location.human_address}</h3>`
+            parkResult.innerHTML = `<h3>${parkObject.park_name}: ${parsedAddress.address}</h3>`
             parkResult.appendChild(saveBtn)
 
             parksList.appendChild(parkResult)
