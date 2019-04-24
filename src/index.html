@@ -10,16 +10,18 @@
 
 <body>
     <h1>Welcome to Nashville!</h1>
-
     <select id="parks-search">
-
-        <option value="ada_accessible">Handicap Accessible</option>
+        <option value="ada_accessible">Universally Accessible</option>
         <option value="baseball_fields">Baseball Fields</option>
         <option value="basketball_courts">Basketball Courts</option>
         <option value="dog_park">Dog Park</option>
         <option value="hiking_trails">Hiking Trails</option>
         <option value="swimming_pool">Swimming Pool</option>
-    </select> </br>
+    </select>
+    <button id="parksSearchBtn">Search</button>
+    <div id="displayParksResults">
+    </div>
+    </br>
 
     </section>
     <select id="foodOptions">Restaurants:
@@ -55,7 +57,10 @@
     <section id="itinerary_container">
         <div>
             <h3>Park:</h3>
-            <!-- Id below displays saved park data (Park name and address) -->
+            <div id="chosenParkDiv" class="chosenParkDiv">
+                    <!-- Id below displays saved park data (Park name and address) -->
+                    <p id="park"></p>
+                </div>
             <p id="park"></p>
         </div>
         <div id="restaurantChoice">
@@ -77,7 +82,8 @@
 
     </section>
 
-    <script src="src/scripts/food.js"></script>
+    <script src="scripts/food.js"></script>
+    <script src="scripts/parks.js"></script>
 </body>
 
 </html>
