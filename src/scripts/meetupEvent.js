@@ -27,7 +27,8 @@ function meetupsValue() {
 
 
  resultsBuilder = (itemName, itemInfo, resultType) => {
-    let resultsField =
+    let resultsField = ""
+    resultsField = 
     `
     <div>
         <div>
