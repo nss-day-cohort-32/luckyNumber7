@@ -13,5 +13,8 @@ Restaurants are searchable by cuisine type in a dropdown menu.
 
 
 We connected our restaurant search to the Zomato API.
-We connected our park to the Nashville Metro Gov API.
-We connected our 
+We connected our park search to the Nashville Metro Gov API.
+We connected our concerts search to the Ticketmaster API.
+We connected our events search to the Eventbrite API.
+
+
