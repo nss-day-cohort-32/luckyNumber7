@@ -7,6 +7,9 @@
   },
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "description": "",
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-bg-shell": "^2.3.3",
@@ -15,4 +18,28 @@
     "grunt-http-server": "^2.1.0",
     "load-grunt-config": "^1.0.1"
   }
+<<<<<<< HEAD
+=======
+  "dependencies": {
+=======
+  "devDependencies": {
+>>>>>>> master
+    "grunt": "^1.0.4",
+    "grunt-bg-shell": "^2.3.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-http-server": "^2.1.0",
+    "load-grunt-config": "^1.0.1"
+<<<<<<< HEAD
+  },
+  "devDependencies": {},
+  "description": ""
+>>>>>>> master
 }
+=======
+  }
+}
+>>>>>>> master
+=======
+}
+>>>>>>> master
