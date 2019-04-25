@@ -9,5 +9,9 @@ const domComponents = {
     appendResultsInput(domElement){
         let searchContainer = document.querySelector("#results_container");
         searchContainer.innerHTML += domElement;
+    },
+    appendFoodInput(domElement){
+        let searchContainer = document.querySelector("#displayFoodResults");
+        searchContainer.innerHTML += domElement;
     }
 }

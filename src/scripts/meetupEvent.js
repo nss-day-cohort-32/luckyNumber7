@@ -11,12 +11,12 @@ function meetupsValue() {
     let sectionInfo = document.getElementById("results_container");
     let header = document.createElement("h2");
     sectionInfo.innerHTML = " ";
-    header.innerHTML = "Results";
+    header.innerHTML = "Meetup Results";
     sectionInfo.appendChild(header);
  }
 
 
-//  const inputMeetups = document.getElementById("meetups-search");
+
 
 
 
@@ -27,7 +27,8 @@ function meetupsValue() {
 
 
  resultsBuilder = (itemName, itemInfo, resultType) => {
-    let resultsField =
+    let resultsField = ""
+    resultsField = 
     `
     <div>
         <div>

@@ -18,7 +18,7 @@ let restaurantChoices = function () {
              let foodHTML = foods.restaurant.name;
              let addressHTML = foods.restaurant.location.address;
              // Line below uses 3 arguments passed through resultsBuilder, which is then passed through appendResultsInput
-             domComponents.appendResultsInput(resultsBuilder(foodHTML, addressHTML, "rest"));
+             domComponents.appendFoodInput(resultsBuilder(foodHTML, addressHTML, "rest"));
         })
          // Line below is a function declared in eventlistener.js | Used to apply eventlisteners to every save button
         clickSave();

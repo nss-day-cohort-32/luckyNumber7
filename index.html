@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <title>Welcome to Nashville</title>
 </head>
 
 <body>
-    <h1>Welcome to Nashville!</h1>
+    <div class="header">
+        <h1>Welcome to Nashville</h1>
+    </div>
+    
+<div class="park">
     <select id="parks-search">
         <option value="ada_accessible">Universally Accessible</option>
         <option value="baseball_fields">Baseball Fields</option>
@@ -18,11 +23,11 @@
         <option value="hiking_trails">Hiking Trails</option>
         <option value="swimming_pool">Swimming Pool</option>
     </select>
-    <button id="parksSearchBtn">Search</button>
-    <div id="displayParksResults">
-    </div>
+    <button id="parksSearchBtn" class="btn btn-info">Search</button>
+    <section id="displayParksResults"></section>
+    </section>
     </br>
-
+</div>
     </section>
     <select id="foodOptions">Restaurants:
         <option value="">Select</option>
@@ -39,25 +44,28 @@
     </select>
 
     <section id="sectionid">
-        <input type="text" placeholder="Types of Events" id="concertSearch"> 
-        <button type="button" id="concertsButton">Search</button>
+        <input type="text" name="concerts" id="concertSearch" placeholder="concerts by genre">
+        <button type="button" class="btn btn-info" id="concertsButton">Search</button>
     </section>
     <section id="sectionid">
         <input type="text" name="meetups" id="meetups-search" placeholder="meetups by topic">
-        <button type="button" id="meetups-search-button">Search</button>
+        <button type="button" class="btn btn-info" id="meetups-search-button">Search</button>
+        
     </section>
 
-    <div id="displayFoodResults"></div>
+    <section id="displayFoodResults"></section>
 
     <div id="concertsResult"></div>
  
+    <!-- this is where is put my results from my api -->
     <section id="results_container"></section>
-    <section id="meetupChoice"></section>
 
     
     <form class="meetup__saved">
-        <h2>saved result</h2>
     </form>
+
+
+<!-- this is where i put my itinerary results whenever i click the save button -->
     <section id="itinerary_container">
         <div>
             <h3>Park:</h3>
@@ -68,6 +76,7 @@
             <p id="park"></p>
         </div>
         <div id="restaurantChoice">
+            <h3>Restaraunts:</h3>
             <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
             <p id="rest"></p>
         </div>

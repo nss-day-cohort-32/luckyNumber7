@@ -27,7 +27,7 @@ findParkFeatures = () => {
             saveBtn.innerHTML = "Save"
             saveBtn.setAttribute("id", `${parkObject.park_name}: ${parsedAddress.address}`)
             saveBtn.addEventListener("click", saveParkToItin)
-            parkResult.innerHTML = `<h3>${parkObject.park_name}: ${parsedAddress.address}</h3>`
+            parkResult.innerHTML = `<p>${parkObject.park_name}: ${parsedAddress.address}</p>`
             parkResult.appendChild(saveBtn)
 
             parksList.appendChild(parkResult)
