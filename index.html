@@ -39,22 +39,21 @@
     </select>
 
     <section id="sectionid">
-        <input type="text" name="concerts" id="concerts-search" placeholder="concerts by genre">
-        <button type="button" id="concerts-search-button">Search</button>
+        <input type="text" placeholder="Concerts by genre" id="concertSearch"> 
+        <button type="button" id="concertsButton">Search</button>
     </section>
     <section id="sectionid">
         <input type="text" name="meetups" id="meetups-search" placeholder="meetups by topic">
         <button type="button" id="meetups-search-button">Search</button>
     </section>
 
-    <div id="displayFoodResults">
+    <div id="displayFoodResults"></div>
 
-    </div>
+    <div id="concertsResult"></div>
  
     <section id="results_container"></section>
     <section id="meetupChoice"></section>
 
-<div id="concertsResult"></div>
     
     <form class="meetup__saved">
         <h2>saved result</h2>
@@ -86,6 +85,7 @@
 
 
     </section>
+    <script src="/src/scripts/concert.js"></script>
     <script src="src/scripts/meetupDomBuilder.js"></script>
     <script src="src/scripts/database.js"></script>
     <script src="src/scripts/meetupEvent.js"></script>
