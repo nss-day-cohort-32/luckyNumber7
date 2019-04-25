@@ -44,7 +44,7 @@ let concertButton = document.querySelector("#concerts-search-button")
  
 let userSearchConcertsButton = document.getElementById("concertsButton");
 userSearchConcertsButton.addEventListener("click", concertsValue);
-const data = {
+const concertData = {
   eventNameData(eventType){
          fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=XDZ7nd4kIfrX7NgbDW8U1TVk09GslZnh&city=Nashville&countryCode=US&keyword=${eventType}&sort=date,asc`)
              .then(events => events.json())
@@ -64,7 +64,7 @@ const data = {
             function concertsValue() {
               let userSearchConcertValue = document.getElementById("concertSearch").value;
               console.log(userSearchConcertValue);
-              data.eventNameData(userSearchConcertValue)
+              concertData.eventNameData(userSearchConcertValue)
               let sectionInfo = document.getElementById("results_container");
               let header = document.createElement("h2");
               sectionInfo.innerHTML = " ";
