@@ -11,28 +11,18 @@ let restaurantChoices = function () {
             "user-key": "ce5dc477c3311b85af742db4ad454c90",
         }
     })
-        .then(response => response.json())
-        .then(restaurantChoices => {
-            resultsDiv.innerHTML = ""
-            console.table("restaurant choices", restaurantChoices);
-            for (var i = 0; i < restaurantChoices.restaurants.length; i++) {
-                let restaurantName = restaurantChoices.restaurants[i].restaurant.name
-                let restaurantAddress = restaurantChoices.restaurants[i].restaurant.location.address
-                resultsDiv.innerHTML += `<div id = "foodDiv${[i]}">
-            <h2>${restaurantName}</h2>
-            <p>${restaurantAddress}</p>
-            </div>
-            <button id = "foodSave${[i]}">SAVE</button>`
-            document.getElementById(`foodDiv${[i]}`).classList.add(`restaurantChoice${[i]}`)
-            console.log(`foodSave${[i]}`);
-            document.getElementById(`foodSave${i}`).onclick = () =>{
-                let restaurantChoice = document.getElementById("restaurantChoice")
-                let foodDiv = ""
-                foodDiv = document.getElementById(`foodDiv${[i]}`)
-                restaurantChoice.innerHTML += `Restaurant: ${foodDiv.innerHTML}`
-            }
-            }
+    .then(foods => foods.json())
+    .then(Allfoods => {
+        let allfoods = Allfoods.restaurants
+        allfoods.forEach(foods => {
+             let foodHTML = foods.restaurant.name;
+             let addressHTML = foods.restaurant.location.address;
+             // Line below uses 3 arguments passed through resultsBuilder, which is then passed through appendResultsInput
+             domComponents.appendResultsInput(resultsBuilder(foodHTML, addressHTML, "rest"));
         })
+         // Line below is a function declared in eventlistener.js | Used to apply eventlisteners to every save button
+        clickSave();
+    })
 }
 //select a cuisine type
 foodOptions.onchange = function () {
@@ -43,3 +33,25 @@ foodOptions.onchange = function () {
     // console.log(restaurantChoices());
 }
 
+let foodClickSave = () => {
+    let foodSave = document.querySelectorAll(".foodSave");
+    for(let i = 0; i < foodSave.length; i++){
+        foodSave[i].addEventListener("click", getFoodResult);
+        console.log(getFoodResult);
+    }
+}
+
+let getFoodResult = (event) => {
+    let foodResultHTML = event.target.parentElement.firstElementChild.innerHTML;
+    console.log(foodResultHTML);
+    let buttonClass = event.target.classList[1]
+    listBuilder(foodResultHTML, buttonClass);
+}
+
+listBuilder = (taco1, taco2) => {
+    let itineraryField = `<h3 class="finalAppend">
+                        ${taco1}</h3> `
+    let finalResult = document.getElementById(taco2)
+    finalResult.innerHTML = itineraryField
+    console.log
+}
