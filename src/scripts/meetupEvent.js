@@ -16,7 +16,7 @@ function meetupsValue() {
  }
 
 
-//  const inputMeetups = document.getElementById("meetups-search");
+
 
 
 
