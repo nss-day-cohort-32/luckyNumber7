@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/styles/main.css">
     <title>Welcome to Nashville</title>
 </head>
@@ -23,7 +24,7 @@
         <option value="hiking_trails">Hiking Trails</option>
         <option value="swimming_pool">Swimming Pool</option>
     </select>
-    <button id="parksSearchBtn">Search</button>
+    <button id="parksSearchBtn" class="btn btn-info">Search</button>
     <section id="displayParksResults"></section>
     </section>
     </br>
@@ -45,11 +46,12 @@
 
     <section id="sectionid">
         <input type="text" name="concerts" id="concerts-search" placeholder="concerts by genre">
-        <button type="button" id="concerts-search-button">Search</button>
+        <button type="button" class="btn btn-info" id="concerts-search-button">Search</button>
     </section>
     <section id="sectionid">
         <input type="text" name="meetups" id="meetups-search" placeholder="meetups by topic">
-        <button type="button" id="meetups-search-button">Search</button>
+        <button type="button" class="btn btn-info" id="meetups-search-button">Search</button>
+        
     </section>
 
     <section id="displayFoodResults">
@@ -63,8 +65,8 @@
 
     
 
+    
     <form class="meetup__saved">
-        <h2>saved result</h2>
     </form>
 
 
@@ -79,6 +81,7 @@
             <p id="park"></p>
         </div>
         <div id="restaurantChoice">
+            <h3>Restaraunts:</h3>
             <!-- Id below displays saved restaraunt data (Restaraunt name and address) -->
             <p id="rest"></p>
         </div>
